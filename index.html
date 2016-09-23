@@ -1,0 +1,52 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Modak" rel="stylesheet">
+</head>
+    <body>
+        <button class="animator">Animate</button>
+        <button class="toggler">Toggle</button>
+        <ul>
+            <li>
+                Carmel
+            </li>
+            <li>
+                Jason
+            </li>
+            <li>
+                Brian
+            </li>
+            <li>
+                Stefano
+            </li>
+        </ul>
+        <script>
+            $('button.animator').click(function() {
+              //this will happen when we  click the button:
+              $("li").each(function() {
+                  $(this).animate({
+                      "font-size": "125px",
+                      "color": "#e069ed"
+                  }, {
+                      duration: 'slow',
+                      easing: 'easeOutBounce'
+                  })
+              });
+            });
+            $('button.toggler').click(function() {
+              $('ul').fadeIn();
+            });
+        </script>
+        <style>
+          ul {
+            font-family: 'Modak', cursive;
+            display: none;
+          }
+        </style>
+
+    </body>
+
+</html>
